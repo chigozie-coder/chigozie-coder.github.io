@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hacker</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+ <style type="text/css">
+   body {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: none;
+  display: flex;
+}
+*::selection{
+  background: whitesmoke;
+  color: black;
+  opacity: 1;
+}
+#myBtn,#hBtn{
+  position: fixed;
+  z-index: -9999;
+}
+.term{
+  height: 95%;
+  width: 100%;
+  color: whitesmoke;
+  background: black;
+  padding: 1px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.h{
+  font-size: 10px;
+  text-align: center;
+  margin-top: 20px;
+  user-select: none;
+  
+}
+#o{
+  color: lawngreen;
+  font-size: 16px;
+  margin-top: 20px;
+  font-family: monospace;
+}
+.by{
+  text-align: right;
+  font-family: monospace;
+  font-size: 10px;
+}
+.hinp{
+  color:white;
+  background: inherit;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-family: monospace, 'Courier New', Courier, monospace;
+  font-weight: bold;
+  width: 85%;
+}
+.text{
+  color:white;
+  background: inherit;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  font-family: monospace, 'Courier New', Courier, monospace;
+  font-weight: bold;
+  width: 40%;
+}
+span{
+  font-weight: 1000;
+}
+
+ </style>
+</head>
+
+<body>
+  <button id="myBtn" onclick="check()"></button>
+  <button id="hBtn" onclick="ert()"></button>
+  <div class="term">
+  <div class="h">░█▀▀░█▀█░█░░░█▀█░█░█░█▀█░█▀▀░█░█░█▀▀░█▀▄
+░▀▀█░█░█░█░░░█░█░█▀█░█▀█░█░░░█▀▄░█▀▀░█▀▄
+░▀▀▀░▀▀▀░▀▀▀░▀▀▀░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░▀</div><div class="by">by Chigozie Anyaeji</div>
+  <div><span>~$</span><input class="hinp"></div>
+  <div id="o"></div>
+  
+  
+  </div>
+  <script>
+var term=document.querySelector('.term')
+var nodes = document.querySelectorAll('.hinp');
+var first = nodes[0];
+var last = nodes[nodes.length- 1];
+var isUpdated=false;
+window.onload=()=>{
+term.onclick=()=>{
+last.focus()
+last.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});
+}
+}
+function check() {
+  var inn;
+  switch (last.value) {
+    case 'connect':
+      if (!isUpdated) {
+        var inc=0;
+        setInterval(()=>{
+          if (inc<101) {
+            document.getElementById("o").innerHTML="Starting new session with 10 packages "+inc+"%";
+            inc++
+          }
+        },Math.floor(Math.random()*(300-100)+100))
+        isUpdated=true;
+        
+        }
+      else{
+        document.getElementById("o").innerHTML="Already Updated! \njust run $ hack to hack any SL account"
+      }
+      break;
+    case 'help':
+      document.getElementById("o").innerHTML="Just type ~$connect.<br> and then type ~$hack id"
+      break;
+    case 'hack':
+      if(isUpdated){
+      document.getElementById("o").innerHTML=`running command \'hack\'...`
+      setTimeout(()=>{
+        var inc=0;
+        setInterval(()=>{
+          if (inc<101) {
+            document.getElementById("o").innerHTML="Installing SLhack...&nbsp; "+inc+"%";
+            inc++
+          }
+        },Math.floor(Math.random()*(100-100)+100))
+      },1500)
+      setTimeout(()=>{document.getElementById("o").innerHTML=`Setting up SLhack...`},13000)
+      setTimeout(()=>{document.getElementById("o").innerHTML=`hack_><input class="text">`; document.querySelector(".text").focus()
+      document.querySelector(".text").addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("hBtn").click();
+  }
+});
+},14500)
+      }
+      else{
+        document.getElementById("o").innerHTML="please run $connect to update before using this feature"
+      }
+      break;
+    
+    
+  }
+}
+function ert() {
+  var id = document.querySelector(".text").value;
+  document.getElementById("o").innerHTML=`Checking for id \'${id}\'...`
+  setTimeout(()=>{
+    document.getElementById("o").innerHTML=`Checking database...`
+  },1500)
+  setTimeout(()=>{
+    document.getElementById("o").innerHTML=`checking at .../databases/database.db?id=${id} ...`
+  },3000)
+  setTimeout(()=>{
+    navigator.vibrate(1000,100,10)
+    document.getElementById("o").innerHTML=`<div class='h'>░█▀█░█▀█░█▀▄░▀█▀░█░░░░░█▀▀░█▀█░█▀█░█░░
+░█▀█░█▀▀░█▀▄░░█░░█░░░░░█▀▀░█░█░█░█░█░░
+░▀░▀░▀░░░▀░▀░▀▀▀░▀▀▀░░░▀░░░▀▀▀░▀▀▀░▀▀▀</div>`
+alert('April Fool\nYou have just been fooled')
+  },7000)
+}
+</script>
+</body>
+</html>
