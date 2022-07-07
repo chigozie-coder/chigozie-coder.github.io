@@ -4,48 +4,58 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url=https://chigozieanyaejip.bio.link">
-  <title>Chigozie Anyaeji Website</title>
+
+  <title>HTML</title>
   
   <!-- HTML -->
   
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <script src="https://kit.fontawesome.com/8cd49823a2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="start">
-  <div id="sb">
-  <div id="nav_bar">
-    <div id="nav_bar_dd">
-      &#9776;
+  <div id="container">
+    <header class="s_dark">
+      <div style="width: 250px" id="sep">
+      <img src="images/chigozie.jpg" class="rounded" height="50px" width="50px"/>
+      
+      <h3>Chigozie Anyaeji</h3>
+      </div>
+      <button align="right" id="lab" onclick="onav()">&#8801;</button>
+      <section class="hl">
+      <a href="about.html" class="links">About me</a>
+      <a href="contact.html" class="links">Contact me</a>
+      </section>
+    </header>
+    <div id="snav">
+      <a href="about.html" class="links">About me</a>
+      <a href="contact.html" class="links">Contact me</a>
+      <div id="links"><a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+      <a href="#"><i class="fa fa-whatsapp"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a></div>
     </div>
-  </div>
-  <div id="sidebar" class="col-md-3 col-l-3">
-    <div id="sbht">
-      Chigozie
+    <div id="s-header">
+      <span class="iam">I am</span>
+      <span class="wb">Chigozie Anyaeji</span>
     </div>
-    <a href="#" class="sb_link home">Home</a>
-    <a href="#" class="sb_link portfolio">Portflio</a>
-    <a href="#" class="sb_link Contact Me">Contact Me</a>
-    <a href="#" class="sb_link blog">Blog</a>
-    <a href="#" class="sb_link blog">Blog</a>
-    <a href="#" class="sb_link blog">Blog</a>
-    <a href="#" class="sb_link blog">Blog</a>
-    <div id="fht">
-      My Website
+      <h2 id="skh">Skills</h2>
+      <div id="sb">
+      <p class="sh">FRONTEND</p>
+<div class="container">
+  <div class="skills f">90%</div>
+</div>
+
+<p class="sh">BACKEND</p>
+<div class="container">
+  <div class="skills b">20%</div>
+</div>
     </div>
-  </div>
-  </div>
-  <div id="imgc"><img src="images/def2bfa7-b737-4195-98f7-ff7f1001af40.jpg" alt="" height="150px" width="150px" id="pro_pic"/></div>
-  <div id="bio" class="col-md-9 col-l-6">
-    <span class="bio_text">Young Coder and Programmer</span><br>
-    <span class="bio_text_e"><b>{{start()}} Everyone!</b> Welcome to my website. Feel free around and you can also view the source code on <a href="https://github.com/chigozie-coder/chigozie.github.io">github</a> or <a href="mailto:chigozieanyaeji@gmail.com">contact me</a>.</span>
-  </div>
   </div>
   <!-- Project -->
-  <script src="main.js" defer></script>
-  <script src="vue@2.6.12.js"></script>
+  <script src="script/main.js"></script>
 </body>
 </html>

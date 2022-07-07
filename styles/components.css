@@ -1,0 +1,24 @@
+.rounded{
+  border-radius: 50%;
+}
+.s_dark{
+  background: #020304DB;
+}
+.b_s_round{
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  outline: none;
+}
+.links{
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bolder;
+}
+.links:hover{
+  border-bottom: 5px solid lightskyblue;
+}
+.out{
+  transform: translateX(0px);
+}
