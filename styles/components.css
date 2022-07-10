@@ -22,3 +22,17 @@
 .out{
   transform: translateX(0px);
 }
+.input{
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 0 10px inset dimgrey;
+  border: none;
+  margin-bottom: 20px;
+  caret-color: deeppink;
+  padding-left: 10px
+}
+.input:focus{
+  outline: none;
+}
